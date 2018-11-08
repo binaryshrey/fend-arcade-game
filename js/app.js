@@ -19,15 +19,13 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
     this.x += this.speed * dt;
-    if (this.x >= 505) {
+    if (this.x >= 500) {
         this.x = -100;
-        this.speed = 100 + Math.floor(Math.random() * 400);
+        this.speed = 100 + Math.floor(Math.random() * 300);
     }
 
-    if (player.x >= this.x - 80 &&
-        player.x - 80 <= this.x &&
-        player.y <= this.y &&
-        player.y + 60 >= this.y) {//to check if the enemy and player are touching.
+    if (player.x >= this.x - 80 && player.x - 80 <= this.x && player.y <= this.y && player.y + 60 >= this.y) {
+        //for alerting user that they lost.
         alert("You lose!");
         player.x = 200;
         player.y = 400;
@@ -49,7 +47,6 @@ class player {
         this.x = x;
         this.y = y;
         this.speed = speed;
-
     }
     update() {
         //prevent player from moving off the grid
@@ -60,7 +57,6 @@ class player {
         if (this.x < 0)
             this.x = 0;
         if (this.y < 0) {
-
             this.x = 200;
             this.y = 400;
             alert("you won");
@@ -99,7 +95,7 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
-player = new player(200, 400, 50);
+player = new player(200, 400, 50);//passing values
 let allEnemies = []
 var pos = [60, 140, 220];
 for (i = 0; i < 3; i++) {
