@@ -1,6 +1,8 @@
 # fend-arcade-game
 Udacity FEND Arcade-Game project
 
+![Overview](https://raw.githubusercontent.com/binaryshrey/fend-arcade-game/master/Overview.png)
+
 # Getting Started
 - Follow this [Arcade-Game](https://binaryshrey.github.io/fend-arcade-game/) site or clone the repo on to your system.
 - Extract the .zip file
